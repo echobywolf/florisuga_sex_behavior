@@ -13,54 +13,79 @@ knitr::opts_chunk$set(echo = TRUE)
 
 Load the packages you will need using library()
 ```{r}
-
+#install.packages("tidyverse")
+library(tidyverse)
 ```
 
 Read your csv dataset into a tibble dataframe on R
 ```{r}
-
+#install.packages("tibble")
+library(tibble)
+fsb = read.csv("SexBehavior.csv")
+as_tibble(fsb)
 ```
 
 What are the names of the columns?
 ```{r}
-
+colnames(fsb, do.NULL = TRUE, prefix = "col")
 ```
 
 How many rows of data do you have? 
 ```{r}
+rownames(fsb, do.NULL = TRUE, prefix = "row")
 
+##Ans:107
 ```
 
 How many unique trials had sex behavior in them? 
 ```{r}
+sbd = read.csv("Sexual Behavior Data Sheets.csv")
+as_tibble(sbd)
+names(sbd)[names(sbd) == 'X.0.1..court.copul.presence'] <- 'presence'
 
+library(dplyr)
+sexbpres = sbd %>%
+  filter(presence == 1)
+rownames(sexbpres, do.NULL = TRUE, prefix = "row")
+
+##Ans:31
 ```
 
 How many unique bouts of behavior exist in the data set? 
 ```{r}
+list(fsb$bout_num)
 
+##Ans:64
 ```
 
 ##Advanced stuff below!!!
 
 Currently your main data sheet does not have the date in it. Read in your "Sexual Behavior Data Sheet" csv into a tibble dataframe, which does have the date.
 ```{r}
-
+sbd = read.csv("Sexual Behavior Data Sheets.csv")
+as_tibble(sbd)
 ```
 
 Dates usually are default read in as characters and are not interpreted as dates. Use the lubridate package to "parse" your date column -- change it from a character to a date
 ```{r}
+#install.packages("lubridate")
+library(lubridate)
 
+newdate = sbd %>%
+  mutate(date = ymd(sbd$date))
+
+as_tibble(newdate)
 ```
 
 Use the trial_num column in both of your data frames to join the two together. Hint: you'll need to use some sort of "join" function from dplyr package
 ```{r}
-
+m.trial.date = merge(newdate$trial_num, newdate$date, by="date")
+as_tibble(m.trial.date)
 ```
 
 What date had the highest number of bouts?
 ```{r}
-
+max(fsb$bout_num)
 ```
 
 
