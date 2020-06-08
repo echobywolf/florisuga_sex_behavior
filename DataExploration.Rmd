@@ -23,6 +23,10 @@ Read your csv dataset into a tibble dataframe on R
 library(tibble)
 fsb = read.csv("SexBehavior.csv")
 as_tibble(fsb)
+
+#As an alternative:
+fsb = read_csv("SexBehavior.csv")
+#read_csv automatically fits csv into tibble
 ```
 
 What are the names of the columns?
@@ -34,6 +38,10 @@ How many rows of data do you have?
 ```{r}
 rownames(fsb, do.NULL = TRUE, prefix = "row")
 
+#Above works! Alternatively:
+nrow(fsb)
+#directly gives you the number
+
 ##Ans:107
 ```
 
@@ -43,10 +51,17 @@ sbd = read.csv("Sexual Behavior Data Sheets.csv")
 as_tibble(sbd)
 names(sbd)[names(sbd) == 'X.0.1..court.copul.presence'] <- 'presence'
 
-library(dplyr)
+library(dplyr) #dplyr should already be loaded with tidyverse so this isn't particularly necessary
 sexbpres = sbd %>%
   filter(presence == 1)
 rownames(sexbpres, do.NULL = TRUE, prefix = "row")
+
+#Alternatively:
+sexbpres <- sbd %>%
+  filter(presence == 1) %>%
+  nrow()
+#You pipe directly to the nrow function 
+
 
 ##Ans:31
 ```
@@ -56,6 +71,12 @@ How many unique bouts of behavior exist in the data set?
 list(fsb$bout_num)
 
 ##Ans:64
+#I think this is the wrong answer
+
+#Here's what I did
+fsb %>% 
+  distinct(trial_num, bout_num) %>% #distinct lists every unique bout within each trial
+  nrow() #this gives you the number of unique bouts, 79
 ```
 
 ##Advanced stuff below!!!
@@ -79,13 +100,48 @@ as_tibble(newdate)
 
 Use the trial_num column in both of your data frames to join the two together. Hint: you'll need to use some sort of "join" function from dplyr package
 ```{r}
+#I'm getting an error with this code
 m.trial.date = merge(newdate$trial_num, newdate$date, by="date")
 as_tibble(m.trial.date)
+
+#Here's what I usually do:
+
+#With join statements, you are trying to join two datasets by the information in one column. This column is called the "key", and it's usually some identifying piece of information. In our case, the key is the trial_num. The information we want to add from sbd to fsb is the date. So we want to put the correct date from sbd into fsb based on the trial_num. 
+
+#First, it's easiest to make a new dataframe with just the key and the information we want to connect. In this case, trial_num is the key, and the information we want is the date. Therefore:
+
+sbd_trialdate <- sbd %>% 
+  select(trial_num, date) %>% #Just take the trial_num and date
+  filter(!is.na(trial_num)) #There are many columns with no trial_num, so this gets rid of them by taking every row that is not NA in the trial_num column.  
+
+#Now we join!
+fsbdate <- fsb %>% #fsb is the dataframe we want to join to
+  left_join(sbd_trialdate, by = "trial_num") #specifies that we want to combine sbd_trialdate to fsb with the trial_num as the key. 
+
+#There are many different joins in the dplyr package. left_join and inner_join are probably the most useful. left_join keeps all the same number of rows in fsb. If there is a row with a trial_num that does not exist in sbd_trialdate it will put NA for the date. 
+
+#inner_join will never fill with NA. With inner_join, if there fsb has a trial_num that doesn't exist in sbd_trialdate, it will delete that row. 
+
+fsb %>% 
+  inner_join(sbd_trialdate, by = "trial_num")
+
+#You can see here that we have 3 fewer rows. 
+
 ```
 
 What date had the highest number of bouts?
 ```{r}
 max(fsb$bout_num)
+#This gives me an NA
+
+
+#Our new joined dataframe, fsbdate, can be used to figure this out. Not sure if you learned the powers of group_by() and summarize() in the tutorials!
+fsbdate %>%
+  distinct(date, bout_num, .keep_all = TRUE) %>% #distinct() takes all the specified variables and deletes any repeat rows. So in this case it only keeps unique combinations of date and bout_num. The purpose is to have a single row for each individual bout.
+  group_by(date) %>% #Now we use group_by() to tell R there is structure based on date
+  summarize(bouts = n()) %>% #summarize makes a new dataframe with the group_by() variable (date) in just one row, and can make various calculations in the new columns. In this case we just want the number of rows in each date so we use n() to count the bouts in each date.
+  filter(bouts == max(bouts)) #Now filter out the rows with the highest number of bouts. There appear to be 2 dates with 7 bouts!
+
 ```
 
 
