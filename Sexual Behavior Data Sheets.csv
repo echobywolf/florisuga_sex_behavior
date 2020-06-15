@@ -1,140 +1,102 @@
-﻿trial_num,pages,date,trial_type,checked(y/n),(0/1) court/copul presence,notes
-1,2,2017-02-11,M/MLF,y,0,NA
-2,2,2017-02-15,M/F,y,0,NA
-3,1,NA,F/MLF,y,0,no date
-4,1,2017-02-23,F/MLF,y,0,NA
-5,1,2017-02-24,M/MLF,y,0,NA
-6,1,2017-02-25,M/F,y,0,NA
-7,1,2017-02-27,F/MLF,y,0,8:05 check video
-8,1,2017-03-01,M/MLF,y,0,NA
-9,1,2017-03-02,M/MLF,y,0,NA
-10,1,NA,F/MLF,y,0,"no date, 9:19 check video"
-11,1,NA,M/F,y,0,"no date, (?) 9:16 starred and said ""mounted"""
-12,1,2017-03-06,M/MLF,y,0,NA
-13,2,2017-03-07,M/MLF,y,0,7:36 check video
-14,1,2017-03-09,F/MLF,y,0,NA
-15,1,2017-03-13,M/F,y,1,"8:04,8:47,8:54 check video"
-16,1,2017-03-14,F/MLF,y,1,"date says ""14-Mar-20"", 8:15 check video, 9:46 mechanical noises "
-17,1,2017-03-15,M/MLF,y,0,NA
-18,1,2017-03-16,M/MLF,y,0,NA
-19,2,2017-03-20,M/MLF,y,0,NA
-20,1,2017-03-22,M/F,y,0,9:41 check video
-21,1,2017-03-23,F/MLF,y,0,not positive about trial type
-22,1,2017-03-24,M/F,y,0,"more than one date, 8:53,8:58,9:24,10:00 check video"
-23,2,2017-03-28,M/F,y,1,"8:35 see recording 1, 9:00 see recording 2"
-24,1,2017-03-29,F/MLF,y,0,NA
-25,1,2017-03-30,F/MLF,y,0,NA
-26,1,2017-03-31,F/MLF,y,0,NA
-27,2,2017-04-04,M/MLF,y,0,"8:26, 9:25, 9:26 check video"
-28,1,2017-04-05,F/MLF,y,0,"7:52, 7:53, 9:51 check video"
-29,1,2017-04-06,M/F,y,1,"8:48, 8:52 check video"
-30,2,2017-04-07,F/MLF,y,0,NA
-31,3,2017-04-08,M/MLF,y,1,"8:15, 8:35 watch video, few ""maybe's"""
-32,1,2017-04-12,F/MLF,y,0,9:26 check video
-33,1,2017-04-13,M/F,y,0,"7:55, 8:40, 9:30 check video"
-34,2,2017-04-18,F/MLF,y,0,"9:49, 10:10 check video"
-35,2,2017-04-19,M/MLF,y,0,NA
-36,1,2017-04-20,M/F,y,1,10:15 check video 
-37,2,2017-04-21,F/MLF,y,1,8:23 maybe copulate
-38,2,2017-04-24,M/F,y,1,NA
-39,1,2017-04-25,M/MLF,y,0,8:08 check video
-40,1,2017-04-26,M/F,y,0,NA
-41,2,2017-04-27,F/MLF,y,0,8:07 check video
-42,2,2017-04-30,M/MLF,y,0,11:07 check video
-43,2,2017-05-01,M/F,y,1,NA
-44,1,2017-05-02,F/MLF,y,0,NA
-45,1,2017-05-03,M/MLF,y,0,NA
-46,2,2017-05-04,M/F,y,0,NA
-47,2,2017-05-08,F/MLF,y,1,NA
-48,1,2017-05-09,M/MLF,y,0,NA
-49,1,2017-05-10,M/F,y,0,NA
-50,1,2017-05-11,F/MLF,y,0,NA
-51,1,2017-05-12,M/MLF,y,0,NA
-52,1,2017-05-14,M/F,y,0,NA
-53,1,2017-05-15,M/F,y,0,NA
-54,1,2017-05-16,F/MLF,y,1,NA
-55,1,2017-05-17,M/MLF,y,0,NA
-56,1,2017-05-18,M/F,y,0,NA
-57,1,2017-05-19,F/MLF,y,1,NA
-58,1,2017-05-20,M/MLF,y,1,NA
-59,1,2017-05-21,F/M ,y,0,NA
-60,1,2017-05-22,F/MLF,y,0,NA
-61,1,2017-05-23,M/MLF,y,0,NA
-62,1,2017-05-24,M/F,y,0,NA
-63,1,2017-05-27,F/MLF,y,1,NA
-64,1,2017-05-28,M/MLF,y,0,NA
-65,1,2017-05-31,M/F,y,0,NA
-66,1,2017-06-01,F/MLF,y,0,NA
-67,1,2017-06-02,M/MLF,y,1,NA
-68,1,2017-06-03,M/F,y,0,NA
-69,1,2017-06-04,F/MLF,y,0,NA
-70,1,2017-01-02,M/F,y,1,NA
-71,1,2018-03-16,M/F,y,0,NA
-72,2,2018-03-19,F/MLF,y,1,"9:39 check video, note on other type of behavior (high pitched call)"
-73,1,2018-03-20,M/MLF,y,0,NA
-74,2,2018-03-21,M/F,y,1,NA
-75,2,2018-03-22,F/MLF,y,1,NA
-76,1,2018-03-23,M/MLF,y,1,NA
-77,2,2018-03-26,M/F,y,0,NA
-78,1,2018-03-27,F/MLF,y,1,NA
-79,1,2018-03-28,M/MLF,y,1,NA
-80,1,2018-03-29,M/F,y,0,NA
-81,1,2018-03-30,F/MLF,y,1,NA
-82,2,2018-04-02,M/MLF,y,1,NA
-83,1,2018-04-03,M/F,y,1,NA
-84,2,2018-04-04,F/MLF,y,1,NA
-85,2,2018-04-05,M/MLF,y,0,NA
-86,1,2018-04-06,M/F,y,0,NA
-87,1,2018-04-07,F/MLF,y,1,NA
-88,1,2018-04-09,M/MLF,y,0,NA
-89,1,2018-04-10,M/MLF (assuming),y,0,redo of previous trial
-90,1,2018-04-11,M/F,y,0,NA
-91,1,2018-04-12,F/MLF,y,1,"8:13 ""dive but don't think is courtship"""
-92,1,2018-04-13,M/MLF,y,0,NA
-93,1,2018-04-14,M/F,y,1,NA
-94,1,2018-04-15,F/MLF,y,1,Side not explicitly specified a few times
-95,1,2018-04-16,M/MLF  ,y,0,"10:36 ""lots of other action"", likely not relevant tho"
-96,1,2018-04-17,M/F,y,0,9:37 check video
-97,1,2018-04-18,F/MLF,y,0,NA
-98,1,2018-04-20,M/MLF,y,1,"9:06 ""maybe copulate?"""
-99,2,2018-04-21,M/F,y,0,NA
-100,2,2018-04-22,F/MLF,y,0,NA
-101,2,2018-04-23,M/MLF,y,0,"Second page has nothing on it besides date,trial,etc."
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
+﻿trial_num,pages,date,trial_type,checked(y/n),(0/1) court/copul presence,L,F,notes
+1,2,2/11/2017,M/MLF,y,0,M,MLF,NA
+2,2,2/15/2017,M/F,y,0,M,F,NA
+3,1,NA,F/MLF,y,0,MLF,F,no date
+4,1,2/23/2017,F/MLF,y,0,MLF,F,NA
+5,1,2/24/2017,M/MLF,y,0,M,MLF,NA
+6,1,2/25/2017,M/F,y,0,F,M ,NA
+7,1,2/27/2017,F/MLF,y,0,MLF,F,8:05 check video
+8,1,3/1/2017,M/MLF,y,0,M,MLF,NA
+9,1,3/2/2017,M/MLF,y,0,MLF,M,NA
+10,1,NA,F/MLF,y,0,MLF,F,"no date, 9:19 check video"
+11,1,NA,M/F,y,0,M,F,"no date, (?) 9:16 starred and said ""mounted"""
+12,1,3/6/2017,M/MLF,y,0,M,MLF,NA
+13,2,3/7/2017,M/MLF,y,0,M,MLF,7:36 check video
+14,1,3/9/2017,F/MLF,y,0,MLF,F,NA
+15,1,3/13/2017,M/F,y,1,F,M,"8:04,8:47,8:54 check video"
+16,1,3/14/2017,F/MLF,y,1,F,MLF,"date says ""14-Mar-20"", 8:15 check video, 9:46 mechanical noises "
+17,1,3/15/2017,M/MLF,y,0,M,MLF,NA
+18,1,3/16/2017,M/MLF,y,0,MLF,M,NA
+19,2,3/20/2017,M/MLF,y,0,MLF,M,NA
+20,1,3/22/2017,M/F,y,0,F,M,9:41 check video
+21,1,3/23/2017,F/MLF,y,0,F,MLF,not positive about trial type
+22,1,3/24/2017,M/F,y,0,F,M,"more than one date, 8:53,8:58,9:24,10:00 check video"
+23,2,3/28/2017,M/F,y,1,F,M,"8:35 see recording 1, 9:00 see recording 2"
+24,1,3/29/2017,F/MLF,y,0,MLF,F,NA
+25,1,3/30/2017,F/MLF,y,0,F,MLF,NA
+26,1,3/31/2017,F/MLF,y,0,MLF,F,NA
+27,2,4/4/2017,M/MLF,y,0,MLF,M,"8:26, 9:25, 9:26 check video"
+28,1,4/5/2017,F/MLF,y,0,F,MLF,"7:52, 7:53, 9:51 check video"
+29,1,4/6/2017,M/F,y,1,M,F,"8:48, 8:52 check video"
+30,2,4/7/2017,F/MLF,y,0,F,MLF,NA
+31,3,4/8/2017,M/MLF,y,1,M,MLF,"8:15, 8:35 watch video, few ""maybe's"""
+32,1,4/12/2017,F/MLF,y,0,MLF,F,9:26 check video
+33,1,4/13/2017,M/F,y,0,M,F,"7:55, 8:40, 9:30 check video"
+34,2,4/18/2017,F/MLF,y,0,F,MLF,"9:49, 10:10 check video"
+35,2,4/19/2017,M/MLF,y,0,M,MLF,NA
+36,1,4/20/2017,M/F,y,1,M,F,10:15 check video 
+37,2,4/21/2017,F/MLF,y,1,MLF,F,8:23 maybe copulate
+38,2,4/24/2017,M/F,y,1,F,M,NA
+39,1,4/25/2017,M/MLF,y,0,M,MLF,8:08 check video
+40,1,4/26/2017,M/F,y,0,F,M,NA
+41,2,4/27/2017,F/MLF,y,0,F,MLF,8:07 check video
+42,2,4/30/2017,M/MLF,y,0,MLF,M,11:07 check video
+43,2,5/1/2017,M/F,y,1,M,F,NA
+44,1,5/2/2017,F/MLF,y,0,MLF,F,NA
+45,1,5/3/2017,M/MLF,y,0,M,MLF,NA
+46,2,5/4/2017,M/F,y,0,F,M,NA
+47,2,5/8/2017,F/MLF,y,1,F,MLF,NA
+48,1,5/9/2017,M/MLF,y,0,M,MLF,NA
+49,1,5/10/2017,M/F,y,0,F,M,NA
+50,1,5/11/2017,F/MLF,y,0,MLF,F,NA
+51,1,5/12/2017,M/MLF,y,0,MLF,M,NA
+52,1,5/14/2017,M/F,y,0,F,M,NA
+53,1,5/15/2017,M/F,y,0,F,M,NA
+54,1,5/16/2017,F/MLF,y,1,MLF,F,NA
+55,1,5/17/2017,M/MLF,y,0,M,MLF,NA
+56,1,5/18/2017,M/F,y,0,F,M,NA
+57,1,5/19/2017,F/MLF,y,1,F,MLF,NA
+58,1,5/20/2017,M/MLF,y,1,MLF,M,NA
+59,1,5/21/2017,F/M ,y,0,F,M,NA
+60,1,5/22/2017,F/MLF,y,0,F,MLF,NA
+61,1,5/23/2017,M/MLF,y,0,MLF,M,NA
+62,1,5/24/2017,M/F,y,0,M,F,NA
+63,1,5/27/2017,F/MLF,y,1,F,MLF,NA
+64,1,5/28/2017,M/MLF,y,0,M,MLF,NA
+65,1,5/31/2017,M/F,y,0,F,M,NA
+66,1,6/1/2017,F/MLF,y,0,F,MLF,NA
+67,1,6/2/2017,M/MLF,y,1,MLF,M,NA
+68,1,6/3/2017,M/F,y,0,M,F,NA
+69,1,6/4/2017,F/MLF,y,0,F,MLF,NA
+70,1,1/2/2017,M/F,y,1,F,M,NA
+71,1,3/16/2018,M/F,y,0,F,M,NA
+72,2,3/19/2018,F/MLF,y,1,F,MLF,"9:39 check video, note on other type of behavior (high pitched call)"
+73,1,3/20/2018,M/MLF,y,0,MLF,M,NA
+74,2,3/21/2018,M/F,y,1,F,M,NA
+75,2,3/22/2018,F/MLF,y,1,MLF,F,NA
+76,1,3/23/2018,M/MLF,y,1,M,MLF,NA
+77,2,3/26/2018,M/F,y,0,F,M,NA
+78,1,3/27/2018,F/MLF,y,1,MLF,F,NA
+79,1,3/28/2018,M/MLF,y,1,MLF,M,NA
+80,1,3/29/2018,M/F,y,0,F,M,NA
+81,1,3/30/2018,F/MLF,y,1,MLF,F,NA
+82,2,4/2/2018,M/MLF,y,1,MLF,M,NA
+83,1,4/3/2018,M/F,y,1,F,M,NA
+84,2,4/4/2018,F/MLF,y,1,MLF,F,NA
+85,2,4/5/2018,M/MLF,y,0,M,MLF,NA
+86,1,4/6/2018,M/F,y,0,M,F,NA
+87,1,4/7/2018,F/MLF,y,1,F,MLF,NA
+88,1,4/9/2018,M/MLF,y,0,MLF,M,NA
+89,1,4/10/2018,M/MLF (assuming),y,0,MLF,M,redo of previous trial
+90,1,4/11/2018,M/F,y,0,F,M,NA
+91,1,4/12/2018,F/MLF,y,1,F,MLF,"8:13 ""dive but don't think is courtship"""
+92,1,4/13/2018,M/MLF,y,0,M,MLF,NA
+93,1,4/14/2018,M/F,y,1,F,M,NA
+94,1,4/15/2018,F/MLF,y,1,MLF,F,Side not explicitly specified a few times
+95,1,4/16/2018,M/MLF  ,y,0,MLF,M,"10:36 ""lots of other action"", likely not relevant tho"
+96,1,4/17/2018,M/F,y,0,M,F,9:37 check video
+97,1,4/18/2018,F/MLF,y,0,MLF,F,NA
+98,1,4/20/2018,M/MLF,y,1,MLF,M,"9:06 ""maybe copulate?"""
+99,2,4/21/2018,M/F,y,0,F,M,NA
+100,2,4/22/2018,F/MLF,y,0,MLF,F,NA
+101,2,4/23/2018,M/MLF,y,0,MLF,M,"Second page has nothing on it besides date,trial,etc."
