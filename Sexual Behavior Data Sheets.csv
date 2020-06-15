@@ -1,4 +1,4 @@
-﻿trial_num,pages,date,trial_type,checked(y/n),(0/1) court/copul presence,L,F,notes
+﻿trial_num,pages,date,trial_type,checked(y/n),(0/1) court/copul presence,L,R,notes
 1,2,2/11/2017,M/MLF,y,0,M,MLF,NA
 2,2,2/15/2017,M/F,y,0,M,F,NA
 3,1,NA,F/MLF,y,0,MLF,F,no date
