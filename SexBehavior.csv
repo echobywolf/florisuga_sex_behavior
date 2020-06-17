@@ -1,4 +1,4 @@
-﻿trial_num,time,bout_num,action_num,court/copul,side (L/R),aggression_before?,aggression_after?,,notes
+trial_num,time,bout_num,action_num,court.copul,sideLR),aggression_before?,aggression_after?,,notes
 15,8:50,1,1,copul,L,NA,NA,,NA
 16,9:46,1,1,copul,L,NA,NA,,NA
 23,8:00,1,1,copul,L,NA,9:48,,NA
