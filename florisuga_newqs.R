@@ -85,11 +85,19 @@ f.mlf
 #21 no observations (21/35) 0.6
 #0.4 observations
 
+tt <- read_csv("trialtype.obsrate.csv")
+view(tt)
 
 ##I predict that there would less observations in the MLF/M trials vs. the F/MLF and F/M trials
 ## test: one-way ANOVA
 ## H0: no difference among the occurance of court/copul amongst the different trial types
 ## HA: at least one mean differs significantly
 
-#fit <- aov(y ~ A, data=mydataframe)
+###variance assumption test
+library(lawstat)
+levene.test(tt$obs_rate, tt$trial_type) #assumption met 
+
+###ANOVA
+tt.aov = aov(tt$obs_rate ~ tt$obs_rate, data=tt)
+summary(tt.aov) #weird erros...will give me df but not F value and Pr(>F)
 
