@@ -1,0 +1,41 @@
+---
+title: "Florisuga_NewQs"
+author: "Jessica Lecorchick"
+date: "6/26/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(tidyverse)
+
+tt <- read_csv("trialtype.obsrate.csv")
+```
+
+Let's try to do this same test but with a logistic regression
+First we can try with all three types of trials
+```{r}
+model_obsrate <- glm(obs_rate ~ trial_type, family = "binomial", data = tt)
+summary(model_obsrate)
+
+#Now make dataframes with just two types of trials to do pairwise comparisons
+tt_mmlf_mf <- tt %>% filter(trial_type != "F/MLF")
+tt_mf_fmlf <- tt %>% filter(trial_type != "M/MLF")
+tt_mmlf_fmlf <- tt %>% filter(trial_type != "M/F")
+
+#Pairwise logistic regression for M/MLF and M/F
+model_rate <- glm(obs_rate ~ trial_type, family = "binomial", data = tt_mmlf_mf)
+summary(model_rate)
+
+#Pairwise logistic regression for F/MLF and M/F
+model_rate <- glm(obs_rate ~ trial_type, family = "binomial", data = tt_mf_fmlf)
+summary(model_rate)
+
+#Pairwise logistic regression for F/MLF and M/MLF
+model_rate <- glm(obs_rate ~ trial_type, family = "binomial", data = tt_mmlf_fmlf)
+summary(model_rate)
+```
+

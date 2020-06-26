@@ -14,7 +14,6 @@ view(fsb_court)
 nrow(fsb_court) #39
 
 
-
 fsb_copul <- fsb %>%
   filter(court.copul == "copul")
 view(fsb_copul)
@@ -101,3 +100,25 @@ levene.test(tt$obs_rate, tt$trial_type) #assumption met
 tt.aov = aov(tt$obs_rate ~ tt$obs_rate, data=tt)
 summary(tt.aov) #weird erros...will give me df but not F value and Pr(>F)
 
+##Let's try to do this same test but with a logistic regression
+##First we can try with all three types of trials
+
+model_obsrate <- glm(obs_rate ~ trial_type, family = "binomial", data = tt)
+summary(model_obsrate)
+
+#Now make dataframes with just two types of trials to do pairwise comparisons
+tt_mmlf_mf <- tt %>% filter(trial_type != "F/MLF")
+tt_mf_fmlf <- tt %>% filter(trial_type != "M/MLF")
+tt_mmlf_fmlf <- tt %>% filter(trial_type != "M/F")
+
+#Pairwise logistic regression for M/MLF and M/F
+model_rate <- glm(obs_rate ~ trial_type, family = "binomial", data = tt_mmlf_mf)
+summary(model_rate)
+
+#Pairwise logistic regression for F/MLF and M/F
+model_rate <- glm(obs_rate ~ trial_type, family = "binomial", data = tt_mf_fmlf)
+summary(model_rate)
+
+#Pairwise logistic regression for F/MLF and M/MLF
+model_rate <- glm(obs_rate ~ trial_type, family = "binomial", data = tt_mmlf_fmlf)
+summary(model_rate)
