@@ -18,6 +18,12 @@ Just Setup
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+Load packages
+```{r}
+library(tidyverse)
+```
+
+
 Let's explore if courtships or copulations are more frequent.
 ```{r}
 #are courtships or copulations more frequent?

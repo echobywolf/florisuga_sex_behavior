@@ -1,0 +1,59 @@
+---
+title: "SexBehaviorAnalysis"
+author: "Jessica Lecorchick & Jay Falk"
+date: "7/3/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Load necessary packages 
+```{r, message = FALSE}
+library(tidyverse)
+```
+
+Load all data sets here
+```{r, message = FALSE}
+
+```
+
+
+#### First let's look at who males decided to copulate/court first within each trial 
+
+Which mount type was first courted/copulated within each trial? (M/F)
+```{r}
+
+```
+
+Which mount type was first courted/copulated within each trial? 
+```{r}
+
+```
+
+Which mount type was first courted/copulated within each trial? (M/MLF)
+```{r}
+
+```
+
+#### Now instead of looking at the first decision within each trial, lets look at the first decision within each bout
+
+Which mount type was first courted/copulated within each bout? (M/F)
+```{r}
+
+```
+
+Which mount type was first courted/copulated within each bout? (F/MLF)
+```{r}
+
+```
+
+Which mount type was first courted/copulated within each bout? (M/MLF)
+```{r}
+
+```
+
+#### Now let's look overall. How many instances of courtship/copulation at each side? 
+
+Which mount type was first courted/copulated within each bout? (M/F)
