@@ -16,21 +16,59 @@ library(tidyverse)
 
 Load all data sets here
 ```{r, message = FALSE}
-
+fsb <- read_csv("SexBehavior.csv")
+data <- read_csv("Sexual Behavior Data Sheets.csv")
+tt <- read_csv("trialtype.obsrate.csv")
+view(fsb)
 ```
+
 
 
 #### First let's look at who males decided to copulate/court first within each trial 
 
 Which mount type was first courted/copulated within each trial? (M/F)
 ```{r}
+m.f <- fsb %>% 
+  filter(trial_type == "M/F")
 
+m.f
 ```
+Trials: 10 in total
+Firsts:
+15: copul, F, L
+23: copul, F, L
+29: copul, F, R
+36: copul, F, R
+38: copul, F, L
+43: copul, F, R
+70: court, F, L
+74: copul, F, L
+83: court, F, L
+93: copul, F, L
 
-Which mount type was first courted/copulated within each trial? 
+Which mount type was first courted/copulated within each trial? (F/MLF)
 ```{r}
+f.mlf <- fsb %>%
+  filter(trial_type == "F/MLF")
 
+f.mlf
 ```
+Trials: 14 in total (12 usable, 2 non-usable)
+Firsts:
+16: copul, F, L
+37: copul, F, R
+47: court, F, L
+54: copul, F, R
+57: copul, F, L
+63: copul, F, L
+72: court, F, L
+75: court, F, R
+78: UNSPECIFIED
+81: copul, F, R
+84: copul, F, R
+87: court, F, L
+91: UNSPECIFIED
+94: copul, F, R
 
 Which mount type was first courted/copulated within each trial? (M/MLF)
 ```{r}
