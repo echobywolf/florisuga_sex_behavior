@@ -3,7 +3,7 @@
 ## 31 unique trials had sex behavior
 ## 79 unique bouts
 ## 7 is highest number of bouts in one trial
-## 74 courts & coups
+## 103 Courts and Coups
 
 
 #are courtships or copulations more frequent?
@@ -13,6 +13,8 @@ fsb_court <- fsb %>%
 view(fsb_court)
 nrow(fsb_court) #39
 
+fsb
+data
 
 fsb_copul <- fsb %>%
   filter(court.copul == "copul")

@@ -18,12 +18,6 @@ Just Setup
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-Load packages
-```{r}
-library(tidyverse)
-```
-
-
 Let's explore if courtships or copulations are more frequent.
 ```{r}
 #are courtships or copulations more frequent?
@@ -165,9 +159,11 @@ summary(model_rate)
 model_rate <- glm(obs_rate ~ trial_type, family = "binomial", data = tt_mmlf_fmlf)
 summary(model_rate)
 ```
-There is no statistical difference
+There is no statistical difference. *Remember to redo court/copul count after fixing csv
 
+Filtering to find amount of court/coup in each trial type
 ```{r}
-
+court.mf <- m.f %>%
+  filter()
 ```
 

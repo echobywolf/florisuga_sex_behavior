@@ -45,6 +45,9 @@ Firsts:
 74: copul, F, L
 83: court, F, L
 93: copul, F, L
+c/c: 2 courts, 8 copuls
+type: 10 F, 0 M
+side:  7 L, 3 R
 
 Which mount type was first courted/copulated within each trial? (F/MLF)
 ```{r}
@@ -69,23 +72,101 @@ Firsts:
 87: court, F, L
 91: UNSPECIFIED
 94: copul, F, R
+c/c: 4 courts, 8 copuls
+type: 12 F, 0 MLF
+side: 6 L, 6 R
 
 Which mount type was first courted/copulated within each trial? (M/MLF)
 ```{r}
+m.mlf <- fsb %>%
+  filter(trial_type == "M/MLF")
 
+m.mlf
 ```
+Trials: 7 trials in total
+Firsts:
+31: court, MLF, R
+58: copul, M, R
+67: copul, MLF, L
+76: copul, MLF, R
+79: court, M, R
+82: copul, M, R 
+98: copul, MLF, L
+c/c: 2 courts, 5 copuls
+type: 4 MLF, 3 M
+sideL 2 L, 5 R
 
 #### Now instead of looking at the first decision within each trial, lets look at the first decision within each bout
 
 Which mount type was first courted/copulated within each bout? (M/F)
 ```{r}
+m.f <- fsb %>% 
+  filter(trial_type == "M/F")
 
+m.f
 ```
+Total bouts: 20 in total
+Firsts: 
+15:1: copul	L	F
+23:1: copul	L	F
+23:2: court	L	F
+29:1: copul	R	F
+29:2: copul	R	F
+29:3: copul	R	F
+29:4: copul	R	F
+29:5: copul	R	F
+36:1: copul	R	F
+36:2: copul	R	F
+36:3: copul	R	F
+38:1: copul	L	F
+43:1: copul	R	F
+70:1: court	L	F
+70:2: court	L	F
+74:1: copul	L	F
+83:1: court	L	F
+93:1: copul	L	F
+93:2: copul	L	F
+93:3: copul	L	F
+c/c: 4 courts, 16 copuls
+type: 20 F, 0 M
+side: 11 L, 9 R
 
 Which mount type was first courted/copulated within each bout? (F/MLF)
 ```{r}
+f.mlf <- fsb %>%
+  filter(trial_type == "F/MLF")
 
+f.mlf
 ```
+Total bouts:
+Firsts:
+16:1: copul	L	F
+37:1: copul	L	F
+37:2: UNSPECIFIED
+47:1: court	L	F
+47:2: court	L	F
+54:1: copul	R	F 
+54:2: copul	R	F
+54:3: copul	L	MLF
+54:4: copul	R	F
+57:1: copul	L	F
+63:1: copul	L	F
+72:1: court	L	F
+75:1: court	R	F
+75:2: court	R	F
+75:3: copul	R	F
+75:4: court	R	F
+75:5: copul	R	F
+75:6: court	L	MLF
+75:7: copul	R	F
+78:1: UNSPECIFIED
+78:2: UNSPECIFIED
+81:1: copul	R	F
+84:1:
+84:2:
+84:3:
+84:4:
+84:5:
 
 Which mount type was first courted/copulated within each bout? (M/MLF)
 ```{r}
@@ -93,5 +174,3 @@ Which mount type was first courted/copulated within each bout? (M/MLF)
 ```
 
 #### Now let's look overall. How many instances of courtship/copulation at each side? 
-
-Which mount type was first courted/copulated within each bout? (M/F)
