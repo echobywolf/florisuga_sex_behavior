@@ -138,7 +138,7 @@ f.mlf <- fsb %>%
 
 f.mlf
 ```
-Total bouts:
+Total bouts: 35 bouts in total (31 usable, 4 non usable)
 Firsts:
 16:1: copul	L	F
 37:1: copul	L	F
@@ -162,15 +162,88 @@ Firsts:
 78:1: UNSPECIFIED
 78:2: UNSPECIFIED
 81:1: copul	R	F
-84:1:
-84:2:
-84:3:
-84:4:
-84:5:
+84:1: copul	R	F
+84:2: copul	R	F
+84:3: copul	R	F
+84:4: court	R	F
+84:5: copul	R	F
+87:1: court	L	F
+91:1: UNSPECIFIED
+94:1: copul	R	F
+94:2: copul	R	F
+94:3: copul	R	F
+94:4: copul	R	F
+94:5: court R F
+94:6: copul L MLF
+c/c: 10 courts, 21 copuls
+type: 28 F, 3 MLF
+side: 11 L, 20 R
 
 Which mount type was first courted/copulated within each bout? (M/MLF)
 ```{r}
+m.mlf <- fsb %>%
+  filter(trial_type == "M/MLF")
 
+m.mlf
 ```
+Total bouts: 23 total bouts
+Firsts: 
+31:1: court	R	MLF
+31:2: copul	L	M
+31:3: copul	L	M
+31:4: copul	L	M
+31:5: copul	L	M
+58:1: copul	R	M
+67:1: copul	L	MLF
+67:2: copul	R	M
+67:3: copul	R	M
+67:4: copul	L	MLF
+67:5: copul	R	M
+67:6: copul	R	M
+67:7: copul	R	M
+76:1: copul	R	MLF
+79:1: court	R	M
+79:2: court	L	MLF
+79:3: copul	L	MLF
+79:4: copul	R	M
+82:1: copul	R	M
+82:2: copul	R	M
+98:1: copul	L	MLF
+98:2: copul	L	MLF
+98:3: copul	L	MLF 
+c/c: 3 courts, 20 copuls
+type: 14 M, 9 MLF
+side: 11 L, 12 R
 
 #### Now let's look overall. How many instances of courtship/copulation at each side? 
+
+The left side
+```{r}
+l.copul <- fsb %>%
+  filter(sideLR == "L") %>%
+  filter(court.copul == "copul")
+nrow(l.copul) #23
+l.copul
+
+l.court <- fsb %>%
+  filter(sideLR == "L") %>%
+  filter(court.copul == "court")
+nrow(l.court) #16
+l.court
+```
+
+The right side
+```{r}
+r.copul <- fsb %>%
+  filter(sideLR == "R") %>%
+  filter(court.copul == "copul")
+nrow(r.copul) #36
+r.copul
+
+r.court <- fsb %>%
+  filter(sideLR == "R") %>%
+  filter(court.copul == "court")
+nrow(r.court) #18
+r.court
+```
+
