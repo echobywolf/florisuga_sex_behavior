@@ -19,9 +19,26 @@ Load all data sets here
 fsb <- read_csv("SexBehavior.csv")
 data <- read_csv("Sexual Behavior Data Sheets.csv")
 tt <- read_csv("trialtype.obsrate.csv")
-view(fsb)
+#view(fsb)
+
+#JJF: It's always good practice to put some commentary on what each of these datasets are. Treat the markdown a little like you're explaining to someone who doesn't know your work what each command does. It'll also help to name your "data" dataset something different. 
 ```
 
+```{r}
+fsb
+data
+
+#joins are a little easier when you only have the data you're interested in combining, so I'm only selecting the mount at each side and the trial number
+joindata <- data %>% select(trial_num, L, R)
+
+#join statements are sooooo useful! Run this line and you'll see that it's jused "trial num" in both the joindata and fsb dataframes to add L and R columns to your fsb dataframe
+fsbjoin <- fsb %>% left_join(joindata, by = "trial_num")
+
+#I've made a new column that uses sideLR to get the actual mount choice. If sideLR is L, mountchoice put whatever is in the L column. If it's an R, it takes what's in the R column. If it's neither, it puts an NA. Make sure what you have in sideLR is either an L or an R or else you'll get lots of missing data.  
+fsbLF <- fsbjoin %>% 
+  mutate(mountchoice = if_else(sideLR == "L", L, 
+                               if_else(sideLR == "R", R, NULL)))
+```
 
 
 #### First let's look at who males decided to copulate/court first within each trial 
@@ -32,6 +49,8 @@ m.f <- fsb %>%
   filter(trial_type == "M/F")
 
 m.f
+
+#The way you've done this is fine, but using the arrange and distinct functions will probably help here!
 ```
 Trials: 10 in total
 Firsts:
@@ -230,6 +249,8 @@ l.court <- fsb %>%
   filter(court.copul == "court")
 nrow(l.court) #16
 l.court
+
+#JJF: Is L versus R meaningful here? You probably will need to join your "data" tibble to fsb
 ```
 
 The right side
