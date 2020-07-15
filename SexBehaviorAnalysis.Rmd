@@ -24,6 +24,8 @@ tt <- read_csv("trialtype.obsrate.csv")
 #JJF: It's always good practice to put some commentary on what each of these datasets are. Treat the markdown a little like you're explaining to someone who doesn't know your work what each command does. It'll also help to name your "data" dataset something different. 
 ```
 
+
+It'll make this easier if we have the actual mount types that the birds chose rather than just L versus R. Jessica already has this information in the "data" dataset so this should be pretty easy. 
 ```{r}
 fsb
 data
