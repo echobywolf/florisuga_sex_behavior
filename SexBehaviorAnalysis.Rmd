@@ -40,6 +40,7 @@ fsbjoin <- fsb %>% left_join(joindata, by = "trial_num")
 fsbLF <- fsbjoin %>% 
   mutate(mountchoice = if_else(sideLR == "L", L, 
                                if_else(sideLR == "R", R, NULL)))
+fsbLF
 ```
 
 
@@ -238,7 +239,7 @@ side: 11 L, 12 R
 
 #### Now let's look overall. How many instances of courtship/copulation at each side? 
 
-The left side
+The left side (i did sides just to ensure randomness)
 ```{r}
 l.copul <- fsb %>%
   filter(sideLR == "L") %>%
@@ -270,3 +271,172 @@ nrow(r.court) #18
 r.court
 ```
 
+Male
+```{r}
+male.court <- fsbLF %>% 
+  filter(mountchoice == "M") %>%
+  filter(court.copul == "court")
+nrow(male.court)
+male.court #8 
+
+male.copul <- fsbLF %>% 
+  filter(mountchoice == "M") %>%
+  filter(court.copul == "copul")
+nrow(male.copul)
+male.copul #13
+```
+
+Female
+```{r}
+female.court <- fsbLF %>% 
+  filter(mountchoice == "F") %>%
+  filter(court.copul == "court")
+nrow(female.court)
+female.court #23 
+
+female.copul <- fsbLF %>% 
+  filter(mountchoice == "F") %>%
+  filter(court.copul == "copul")
+nrow(female.copul)
+female.copul #38
+```
+
+MLF
+```{r}
+mlf.court <- fsbLF %>% 
+  filter(mountchoice == "MLF") %>%
+  filter(court.copul == "court")
+nrow(mlf.court)
+mlf.court #3
+
+mlf.copul <- fsbLF %>% 
+  filter(mountchoice == "MLF") %>%
+  filter(court.copul == "copul")
+nrow(male.copul)
+mlf.copul #13
+```
+OVERALL:
+Male Court: 8 
+Male Copul: 13
+Male Total: 21
+Female Court: 23
+Female Copul: 38
+Female Total: 61
+MLF Court: 3
+MLF Copul: 13
+MLF Total: 16
+
+#### Now let's look at each trial type overall.
+
+M/F Male
+```{r}
+m.f.court.m <-fsbLF %>%
+  filter(trial_type == "M/F") %>%
+  filter(mountchoice == "M") %>%
+  filter(court.copul == "court")
+nrow(m.f.court.m) #2
+m.f.court.m
+
+m.f.copul.m <-fsbLF %>%
+  filter(trial_type == "M/F") %>%
+  filter(mountchoice == "M") %>%
+  filter(court.copul == "copul")
+nrow(m.f.copul.m) #0
+m.f.copul.m 
+
+#total for males in M/F: 2
+```
+M/F Female
+```{r}
+m.f.court.f <-fsbLF %>%
+  filter(trial_type == "M/F") %>%
+  filter(mountchoice == "F") %>%
+  filter(court.copul == "court")
+nrow(m.f.court.f) #6
+m.f.court.f
+
+m.f.copul.f <-fsbLF %>%
+  filter(trial_type == "M/F") %>%
+  filter(mountchoice == "F") %>%
+  filter(court.copul == "copul")
+nrow(m.f.copul.f) #19
+m.f.copul.f 
+
+#total for females in M/F: 25
+```
+F/MLF Female
+```{r}
+f.mlf.court.f <-fsbLF %>%
+  filter(trial_type == "F/MLF") %>%
+  filter(mountchoice == "F") %>%
+  filter(court.copul == "court")
+nrow(f.mlf.court.f) #17
+f.mlf.court.f
+
+f.mlf.copul.f <-fsbLF %>%
+  filter(trial_type == "F/MLF") %>%
+  filter(mountchoice == "F") %>%
+  filter(court.copul == "copul")
+nrow(f.mlf.copul.f) #19
+f.mlf.copul.f 
+
+#total for females in F/MLF: 36
+```
+F/MLF Male-like Female
+```{r}
+f.mlf.court.mlf <-fsbLF %>%
+  filter(trial_type == "F/MLF") %>%
+  filter(mountchoice == "MLF") %>%
+  filter(court.copul == "court")
+nrow(f.mlf.court.mlf) #1
+f.mlf.court.mlf
+
+f.mlf.copul.mlf <-fsbLF %>%
+  filter(trial_type == "F/MLF") %>%
+  filter(mountchoice == "MLF") %>%
+  filter(court.copul == "copul")
+nrow(f.mlf.copul.mlf) #1
+f.mlf.copul.mlf 
+
+#total for male-like females in F/MLF: 2
+```
+M/MLF Male
+```{r}
+m.mlf.court.m <-fsbLF %>%
+  filter(trial_type == "M/MLF") %>%
+  filter(mountchoice == "M") %>%
+  filter(court.copul == "court")
+nrow(m.mlf.court.m) #6
+m.mlf.court.m
+
+m.mlf.copul.m <-fsbLF %>%
+  filter(trial_type == "M/MLF") %>%
+  filter(mountchoice == "M") %>%
+  filter(court.copul == "copul")
+nrow(m.mlf.copul.m) #13
+m.mlf.copul.m
+
+#total for males in M/MLF: 19
+```
+M/MLF Male-like Female
+```{r}
+m.mlf.court.mlf <-fsbLF %>%
+  filter(trial_type == "M/MLF") %>%
+  filter(mountchoice == "MLF") %>%
+  filter(court.copul == "court")
+nrow(m.mlf.court.mlf) #2
+m.mlf.court.mlf
+
+m.mlf.copul.mlf <-fsbLF %>%
+  filter(trial_type == "M/MLF") %>%
+  filter(mountchoice == "MLF") %>%
+  filter(court.copul == "copul")
+nrow(m.mlf.copul.mlf) #7
+m.mlf.copul.mlf 
+
+#total for male-like females in F/MLF: 9
+```
+Summary:
+M/F: M = 2, F = 25
+F/MLF: F = 36, MLF = 2
+M/MLF: M = 19, MLF = 9
