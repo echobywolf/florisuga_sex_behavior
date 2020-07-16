@@ -440,3 +440,43 @@ Summary:
 M/F: M = 2, F = 25
 F/MLF: F = 36, MLF = 2
 M/MLF: M = 19, MLF = 9
+
+#How often in M/MLF trials do you see switching from one mount to another within a trial?
+```{r}
+m.mlf2 <- fsbLF %>%
+  filter(trial_type == "M/MLF")
+
+m.mlf2
+```
+31: MLF to M: 1 M to MLF: 0 Total: 1
+58: MLF to M: 0 M to MLF: 0 Total: 0 
+67: MLF to M: 2 M to MLF: 1 Total: 3
+76: only 1 bout Total: NA/0
+79: MLF to M: 1 M to MLF: 1 Total: 2
+82: MLF to M: 0 M to MLF: 0 Total: 0
+98: MLF to M: 0 M to MLF: 0 Total: 0 
+
+TOTALS: MLF to M: 4 M to MLF: 2 Total:6
+
+#How often in M/MLF trials do you see switching from one mount to another within a bout?
+```{r}
+m.mlf2 <- fsbLF %>%
+  filter(trial_type == "M/MLF")
+
+m.mlf2 #23 unique bouts
+```
+1: NA         12: NA
+2: 0          13: NA
+3: 0          14: NA
+4: 0          15: NA
+5: NA         16: NA
+6: 0          17: NA  
+7: NA         18: NA
+8: NA         19: NA
+9: NA         20: NA
+10: NA        21: NA
+11: NA        22: NA
+              23: NA
+                                  
+NA = only 1 action
+Total: 0 switches
