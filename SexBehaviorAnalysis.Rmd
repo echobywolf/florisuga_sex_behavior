@@ -608,6 +608,11 @@ m.mlf3
 Total bouts: 23
 % after agression: 18/23 (78.2%)
 
+BOUTS IN ALL TRIAL TYPES:
+77 total bouts = 23 + 34 + 20
+55 total agression = 18 + 21 + 16
+55/77 = (71.4%)
+
 ##Now lets check within trial
 #How many cases was sexual behavior followed by agression (M/F within trial)
 ```{r}
@@ -675,3 +680,8 @@ m.mlf4
 
 total trials: 7
 % agression : 5/7 (71.4%)
+
+IN ALL TRAILS SUMMARY:
+30 total trials = 7 + 13 + 10 
+20 agressions = 5 + 8 + 7 
+20/30 = (66.7%)
